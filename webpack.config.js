@@ -10,7 +10,7 @@ module.exports = {
 	output: {
 		filename: 'bundle.js',
 		path: resolve(__dirname, 'dist'),
-		publicPath: '/'
+		publicPath: '/durandal-webpack/dist/'
 	},
 	devServer: {
 		host: '192.168.0.101', // локальный ip-адрес компьютера
