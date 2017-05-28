@@ -1,0 +1,109 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	// font-size: 100%; // Обнуляем у родителя размер шрифта, чтобы у детей не было отступов
+	// font: inherit;
+	vertical-align: baseline;
+	-webkit-box-sizing: border-box; // padding влияет на ширину input
+	-moz-box-sizing: border-box; // padding влияет на ширину input
+	box-sizing: border-box; // padding влияет на ширину input
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal; // В хроме для заголовков шрифт по умолчанию стоит жирный, поэтому прописываем normal, чтобы сделать его нормальным
+}
+a {
+	outline: none !important; // При нажатии на ссылку появляется точечная красная рамка. Убираем границу вокруг ссылок
+	-webkit-box-sizing: border-box; // padding влияет на ширину input
+	-moz-box-sizing: border-box; // padding влияет на ширину input
+	box-sizing: border-box; // padding влияет на ширину input
+}
+button::-moz-focus-inner {
+	border: 0; // При нажатии на кнопку в мозилле появляется точечная рамка. Убираем её
+}
+button {
+	padding: 0px; // у кнопок идет padding дефолтный
+	-webkit-box-sizing: border-box; // padding влияет на ширину input
+	-moz-box-sizing: border-box; // padding влияет на ширину input
+	box-sizing: border-box; // padding влияет на ширину input
+}
+input {
+	padding: 0px; // у кнопок в мозилле padding дефолтный идет - убираем его
+	box-shadow: none; // Убираем красную тень в полях ввода 
+	-webkit-box-sizing: border-box; // padding влияет на ширину input
+	-moz-box-sizing: border-box; // padding влияет на ширину input
+	box-sizing: border-box; // padding влияет на ширину input
+}
+textarea {
+	-webkit-box-sizing: border-box; // padding влияет на ширину textarea
+	-moz-box-sizing: border-box; // padding влияет на ширину textarea
+	box-sizing: border-box; // padding влияет на ширину textarea
+}
+input::-moz-focus-inner {
+	border: 0px; // При нажатии на input в мозилле появляется точечная рамка. Убираем её
+} 
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+:focus {
+	outline: none; // В хроме, опере и сафари при фокусе появляется голубая рамка - ее убираем 
+}
+::-ms-clear {
+	display: none; // В ie10 при вводе текста в поле появляется крестик очистки - убираем его 
+}
+// В некоторых браузерах текст пропадает не после получения фокуса, а после того, как начинают писать - исправляем это 
+:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+:focus::-moz-placeholder {
+	color: transparent;
+}
+:focus::placeholder {
+	color: transparent;
+}
+a[x-apple-data-detectors] { // в iphone телефонные номера становятся голубыми - убираем это
+	color: inherit !important;
+	text-decoration: none !important;
+	font-size: inherit !important;
+	font-family: inherit !important;
+	font-weight: inherit !important;
+	line-height: inherit !important;
+}
